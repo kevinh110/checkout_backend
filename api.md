@@ -6,6 +6,7 @@
 
 Response:
 
+```json
 {
   "success": true,
   "data": [
@@ -24,6 +25,7 @@ Response:
     ...
   ]
 }
+```
 
 
 ## Create an item
@@ -32,15 +34,18 @@ Response:
 
 Request:
 
+```json
 {
   "name": <USER INPUT>,
   "price": <USER INPUT>,
   "stock": <USER INPUT>
 }
+```
 
 
 Response:
 
+```json
 {
   "success": true,
   "data": {
@@ -50,29 +55,32 @@ Response:
     "price": <USER INPUT FOR PRICE>
   }
 }
+```
 
 ## Change item Price
 
 [POST] /api/items/<int:item_id>/
 
 Request:
-
+```json
 {
   "price": <USER INPUT>,
 }
+```
 
 
 Response:
-
+```json
 {
     "success": true,
     "data": {
-        "id": <ID>,
+        "id": <ITEM_ID>,
         "name": <NAME>,
         "stock": <STOCK>,
         "price": <USER INPUT FOR PRICE>
     }
 }
+```
 
 ## Create Buyer
 
@@ -80,13 +88,16 @@ Response:
 
 Request:
 
+```json
 {
 	"username": <USER INPUT>,
 	"balance": <USER INPUT>
 }
+```
 
 Response:
 
+```json
 {
     "success": true,
     "data": {
@@ -102,6 +113,7 @@ Response:
         "orders": []
     }
 }
+```
 
 ## Get All Buyers
 
@@ -109,6 +121,7 @@ Response:
 
 Response:
 
+```json
 {
     "success": true,
     "data": [
@@ -129,6 +142,7 @@ Response:
         ...
     ]
 }
+```
 
 ## Get Buyer by ID
 
@@ -136,6 +150,7 @@ Response:
 
 Response:
 
+```json
 {
     "success": true,
     "data": {
@@ -146,6 +161,7 @@ Response:
         "orders": [<SERIALIZED ORDER>, ...]
     }
 }
+```
 
 ## Delete Buyer
 
@@ -153,6 +169,7 @@ Response:
 
 Response:
 
+```json
 {
     "success": true,
     "data": {
@@ -163,6 +180,7 @@ Response:
         "orders": [<SERIALIZED ORDER>,...]
     }
 }
+```
 
 ## Add to Cart
 
@@ -170,12 +188,15 @@ Response:
 
 Request:
 
+```json
 {
 	"item_id": <USER INPUT>
 }
+```
 
 Response:
 
+```json
 {
     "success": true,
     "data": {
@@ -191,6 +212,7 @@ Response:
         ]
     }
 }
+```
 
 ## Remove from Cart
 
@@ -198,12 +220,15 @@ Response:
 
 Request:
 
+```json
 {
 	"item_id": <USER INPUT>
 }
+```
 
 Response:
 
+```json
 {
     "success": true,
     "data": {
@@ -212,6 +237,7 @@ Response:
         "items": <SERIALILIZED ITEM LIST WITH SPECIFIED ITEM REMOVED>
     }
 }
+```
 
 ## Checkout Cart
 
@@ -219,6 +245,7 @@ Response:
 
 Response:
 
+```json
 {
     "success": true,
     "data": {
@@ -234,6 +261,7 @@ Response:
         "orders": [<SERIALIZED ORDER LIST WITH CART ITEMS ADDED AS AN ORDER>]
     }
 }
+```
 
 
 
