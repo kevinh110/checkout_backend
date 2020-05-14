@@ -2,4 +2,6 @@
 
 ## Get all items
 
-GET/api/courses/
+[Get] /api/items/
+
+
